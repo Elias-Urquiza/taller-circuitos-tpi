@@ -2,8 +2,7 @@
 
 TP de tomi,nacho,elias y vero.
 
-
-# 🐥 Git Branching: Guía Rápida con Panchito el Pollito 🐥
+## 🐥 Git Branching: Guía Rápida con Panchito el Pollito 🐥
 
 ¡Hola, ameo! Soy Panchito, el pollito piola fui creado por IA para hacer más copado el usar Git 🐥, y te voy a guiar paso a paso para que aprendas cómo usar ramas (branches) en Git. Tranquilo, que lo hacemos simple y sin vueltas. ¡Vamo a meterle! 💪
 
@@ -77,46 +76,69 @@ git push origin pruebas_pepe
 
 Así, todo el mundo puede ver lo que hiciste y meter mano si hace falta. ¡No te olvides de esto cuando termines! 😉
 
----
+### 7. Cambiar a una rama existente y subirla
 
-## Resumen de los comandos 📝
+1. **Cambiar a una rama existente:**
+   ```bash
+   git checkout nombre-de-la-rama
+   ```
 
-Acá te dejo todo bien resumidito para que lo tengas a mano cuando lo necesites:
+2. **Subir la rama al repositorio remoto si aún no está allí:**
+   ```bash
+   git push origin nombre-de-la-rama
+   ```
 
-- **Verificar la rama actual**:
-  ```bash
-  git branch
-  ```
+### 8. Sincronizar una rama con `origin`
 
-- **Crear una nueva rama**:
-  ```bash
-  git branch pruebas_pepe
-  ```
+1. **Obtener los cambios del repositorio remoto:**
+   ```bash
+   git fetch origin
+   ```
 
-- **Cambiar de rama**:
-  ```bash
-  git checkout pruebas_pepe
-  ```
+2. **Fusionar los cambios del repositorio remoto con tu rama local:**
+   ```bash
+   git merge origin/nombre-de-la-rama
+   ```
 
-- **Crear y cambiar a una nueva rama al mismo tiempo**:
-  ```bash
-  git checkout -b pruebas_pepe
-  ```
+   O, para actualizar tu rama local con los cambios remotos sin hacer un merge, puedes usar:
+   ```bash
+   git pull origin nombre-de-la-rama
+   ```
 
-- **Subir la nueva rama a GitHub (u otro repo remoto)**:
-  ```bash
-  git push origin pruebas_pepe
-  ```
+### 9. Eliminar una rama en `origin`
 
----
+1. **Eliminar una rama remota:**
+   ```bash
+   git push origin --delete nombre-de-la-rama
+   ```
 
-## ¿Por qué usar ramas? 🤔
+### 10. Ver ramas en `origin`
 
-Las ramas son lo mejor para:
+1. **Ver todas las ramas remotas:**
+   ```bash
+   git branch -r
+   ```
 
-- **Probar cosas nuevas** sin romper todo el proyecto principal(MAMA CORTASTE TODA LA LOOOS). No te arriesgás a hacer lío en el código de los demás.
-- **Organizarte mejor**, ya que podés trabajar en cada cosa por separado y que no te de amsiedad.
-- **Colaborar con otros**, porque cada uno trabaja en su rama sin pisarse, menos bardo. 🐥
+2. **Ver todas las ramas locales y remotas:**
+   ```bash
+   git branch -a
+   ```
+
+### 11. Configurar el "upstream" de la rama
+
+Si ves un mensaje que te indica que la rama no tiene un "upstream" configurado, usá este comando para empujar la rama y, al mismo tiempo, configurarla para que se conecte automáticamente con el repositorio remoto en futuras ocasiones:
+
+```bash
+git push --set-upstream origin nombre-de-la-rama
+```
+
+### ¿Qué hace este comando?
+
+1. `git push`: Empuja los cambios al repositorio remoto.
+2. `--set-upstream`: Configura la rama actual para que se conecte con la rama del mismo nombre en el repositorio remoto (en tu caso, `origin`).
+3. `origin nombre-de-la-rama`: Le dice a Git que esta rama debe asociarse con la rama del mismo nombre en el repositorio remoto `origin`.
+
+De ahora en más, cuando estés en la rama `nombre-de-la-rama`, podés usar simplemente `git push` sin tener que configurar el upstream de nuevo. ¡Listo!
 
 ---
 
