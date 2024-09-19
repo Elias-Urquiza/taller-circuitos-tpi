@@ -141,7 +141,9 @@ git push --set-upstream origin nombre-de-la-rama
 De ahora en más, cuando estés en la rama `nombre-de-la-rama`, podés usar simplemente `git push` sin tener que configurar el upstream de nuevo. ¡Listo!
 
 ---
+<img src="miscellanea/panchito.jpeg" alt="Descripción de la imagen" width="300"/>
 
 ## ¡Panchito dice: A practicar! 🐥🚀
 
-Ahora que sabés cómo usar las ramas, ¡es hora de que te pongas a practicar! No tengas miedo de probar cosas nuevas. Git te cuida las espaldas, así que si algo no sale como esperabas, podés volver atrás sin problemas. ¡Vamos que se puede! 💪🐥🎉
+Ahora que sabés cómo usar las ramas, ¡es hora de que te pongas a practicar! No tengas miedo de probar cosas nuevas. 
+Git te cuida las espaldas, así que si algo no sale como esperabas, podés volver atrás sin problemas. ¡Vamos que se puede! 💪🐥🎉
