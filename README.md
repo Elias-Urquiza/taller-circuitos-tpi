@@ -141,7 +141,7 @@ git push --set-upstream origin nombre-de-la-rama
 De ahora en más, cuando estés en la rama `nombre-de-la-rama`, podés usar simplemente `git push` sin tener que configurar el upstream de nuevo. ¡Listo!
 
 ---
-![Panchito](miscellanea/panchito.jpeg)
+<img src="miscellanea/panchito.jpeg" alt="Descripción de la imagen" width="300"/>
 
 ## ¡Panchito dice: A practicar! 🐥🚀
 
