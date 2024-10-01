@@ -1,0 +1,4 @@
+; Configuraciones de la gráfica para análisis AC
+ac.magnitude 100 -20
+ac.phase 180 -180
+; Otros ajustes de gráficos también podrían estar aquí

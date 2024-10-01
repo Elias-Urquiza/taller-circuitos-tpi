@@ -1,0 +1,50 @@
+* X:\taller-circuitos-tpi\Simulaciones\2024-09-27 LDO A - margenfase_seguncarga.asc
+RL V2s 0 {RL}
+VIN Vpos 0 6.35
+R1f V2s N007 1.5k
+R2f N007 0 4.7k
+Rs V2s V1s 0.1
+Q2 N004 N004 N002 0 BC558B
+Q3 N001 N004 N003 0 BC558B
+Q4 N004 retro N009 0 BC548B
+Q5 N001 Vref N009 0 BC548B
+R1 Vpos N002 1k
+R14 Vpos N003 1k
+R15 Vpos N008 1k
+Q6 N008 N008 0 0 BC548B
+Q7 N009 N008 0 0 BC548B
+M1 V1s N001 Vpos Vpos irf9540npbf
+V2 Vref 0 2.5 AC 0
+Q1 N001 N005 Vpos 0 BC558B
+Q8 N005 0 0 0 BC548B
+R17 Vpos N005 100k
+C2 V2s N006 {CL}
+C3 Vpos N001 2.2n
+R2 N006 0 0.3
+C1 V2s N007 1.2n
+V1 P001 0 AC 1
+C4 retro P001 10000
+L1 N007 retro 10000
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\verof\AppData\Local\LTspice\lib\cmp\standard.bjt
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\verof\AppData\Local\LTspice\lib\cmp\standard.mos
+* __________________________________________________\n|Tension  |   RF        |  Carga 1A a 20 mA  |  Carga 0.5A a 10mA |\n_____________________________________________________\n|   5   V    |   1.5k   |       5   a 250            |        10   a 500         |\n|  3.3 V    |   4.7k   |      3.3 a 163             |        6.6  a 326         |
+#MODELO TRANSISTORES
+.model BC558B PNP(Is=1.02f Xti=3 Eg=1.11 Vaf=52.31 Bf=306.5 Ise=10.27f Ne=1.764 Ikf=91.85m Nk=.5351 Xtb=1.5 Br=6.48 Isc=1.472f Nc=1.294 Ikr=.5584 Rc=1.086 Cjc=9.81p Mjc=.332 Vjc=.4865 Fc=.5 Cje=30p Mje=.3333 Vje=.5 Tr=10n Tf=611.6p Itf=1.373 Xtf=26.05 Vtf=10 Vceo=30 Icrating=100m mfg=Philips)
+.model BC548B NPN(Is=7.049f Xti=3 Eg=1.11 Vaf=62.79 Bf=374.6 Ise=68f Ne=1.576 Ikf=81.57m Nk=.4767 Xtb=1.5 Br=1 Isc=12.4f Nc=1.835 Ikr=3.924 Rc=.9747 Cjc=5.25p Mjc=.3147 Vjc=.5697 Fc=.5 Cje=11.5p Mje=.6715 Vje=.5 Tr=10n Tf=410.2p Itf=1.491 Xtf=40.06 Vtf=10 Vceo=30 Icrating=100m mfg=Philips)
+.model BC548B NPN(Is=7.049f Xti=3 Eg=1.11 Vaf=62.79 Bf=374.6 Ise=68f Ne=1.576 Ikf=81.57m Nk=.4767 Xtb=1.5 Br=1 Isc=12.4f Nc=1.835
++Ikr=3.924 Rc=.9747 Cjc=5.25p Mjc=.3147 Vjc=.5697 Fc=.5 Cje=11.5p Mje=.6715 Vje=.5 Tr=10n Tf=410.2p Itf=1.491 Xtf=40.06 Vtf=10 Vceo=30 Icrating=100m mfg=Philips)
+.MODEL irf9540npbf PMOS LEVEL=1 IS=1e-32  L=100u W=100u VTO=-3.74034 LAMBDA=0.00254531 KP=6.90462 CGSO=1.15995e-05 CGDO=1e-11
+.lib sloj018.txt
+.ac dec 10 1 10g
+* Definir variables para las impedancias
+.param RL= 326
+.param CL= 1u
+* Barrido de capacitancias
+;step param RL list 6.6 150 326
+;step param CL list 1u 2.2u 15u
+.backanno
+.end

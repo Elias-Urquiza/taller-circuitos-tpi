@@ -1,0 +1,91 @@
+* X:\taller-circuitos-tpi\Simulaciones\2024-09-28 LDO A- rta esc opamps nuevos.asc
+RL V2s 0 {RL}
+VIN Vpos 0 6.35
+R1f V2s retro 1.5k
+Rs V2s V1s 0.1
+R2 V1s N004 1.15K
+R3 N004 0 46k
+R4 V2s N001 1.15K
+R5 Vs N001 46k
+Rx1 ref_in Vref 5k
+Ry1 0 ref_in 536
+Ra1 retro_in retro 115k
+Rb1 0 retro_in 845k
+R6 N011 ref_out 2k
+R7 N011 retro_out 2k
+R8 N012 0 2k
+R9 Vref-c N012 2k
+R10 N003 0 1k
+R11 N003 Vs 1k
+R12 N005 Vref-c 2k
+R13 Vopamp N005 2k
+Q2 N008 N008 N006 0 BC558B
+Q3 N002 N008 N007 0 BC558B
+Q4 N008 retro N015 0 BC548B
+Q5 N002 Vref N015 0 BC548B
+R1 Vpos N006 1k
+R14 Vpos N007 1k
+R15 Vpos N014 1k
+Q6 N014 N014 0 0 BC548B
+Q7 N015 N014 0 0 BC548B
+M1 V1s N002 Vpos Vpos irf9540npbf
+VREF Vref 0 PULSE(2.5 2.501 0 10n 10n .1m .2m)
+Q1 N002 N009 Vpos 0 BC558B
+Q8 N009 Vopamp 0 0 BC548B
+R17 Vpos N009 100k
+XU3 N011 N012 vposop 0 Vref-c MCP6002
+XU2 retro_in retro_out vposop 0 retro_out MCP6002
+XU4 ref_in ref_out vposop 0 ref_out MCP6002
+XU5 N004 N001 vposop 0 Vs MCP6002
+XU1 N003 N005 vposop 0 Vopamp MCP6002
+C3 Vpos N002 150p
+R16 retro 0 1.5k
+C5 V2s N013 1µ
+C2 V2s retro 470p
+R18 N013 0 .3
+V3 vposop 0 5
+C4 P001 N002 33n
+R19 V2s P001 80
+C6 N009 N010 100p
+R20 N010 N002 50
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\verof\AppData\Local\LTspice\lib\cmp\standard.bjt
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\verof\AppData\Local\LTspice\lib\cmp\standard.mos
+* __________________________________________________\n|Tension  |   RF        |  Carga 1A a 20 mA  |  Carga 0.5A a 10mA |\n_____________________________________________________\n|   5   V    |   1.5k   |       5   a 250            |        10   a 500         |\n|  3.3 V    | 4.7k   |      3.3 a 163             |        6.6  a 326         |
+* Realimentador De Corriente / Foldback:
+* Sensado Corriente
+* Realim para los limites del LDO_B
+* Sumador:
+* Amplificador de Error
+.lib MCP6002.txt
+.lib sloj018.txt
+#MODELO DEL TRANSISTOR DE PASO
+.MODEL irf9540npbf PMOS LEVEL=1 IS=1e-32  L=100u W=100u VTO=-3.74034 LAMBDA=0.00254531 KP=6.90462 CGSO=1.15995e-05 CGDO=1e-11
+#MODELO TRANSISTORES CASA
+.model BC558B PNP(Is=1.02f Xti=3 Eg=1.11 Vaf=52.31 Bf=306.5 Ise=10.27f Ne=1.764 Ikf=91.85m Nk=.5351 Xtb=1.5 Br=6.48 Isc=1.472f Nc=1.294 Ikr=.5584 Rc=1.086 Cjc=9.81p Mjc=.332 Vjc=.4865 Fc=.5 Cje=30p Mje=.3333 Vje=.5 Tr=10n Tf=611.6p Itf=1.373 Xtf=26.05 Vtf=10 Vceo=30 Icrating=100m mfg=Philips)
+.model BC548B NPN(Is=7.049f Xti=3 Eg=1.11 Vaf=62.79 Bf=374.6 Ise=68f Ne=1.576 Ikf=81.57m Nk=.4767 Xtb=1.5 Br=1 Isc=12.4f Nc=1.835 Ikr=3.924 Rc=.9747 Cjc=5.25p Mjc=.3147 Vjc=.5697 Fc=.5 Cje=11.5p Mje=.6715 Vje=.5 Tr=10n Tf=410.2p Itf=1.491 Xtf=40.06 Vtf=10 Vceo=30 Icrating=100m mfg=Philips)
+* PNP Transistor BC856BS Model
+.model BC856BS PNP (
++ IS=2.00E-14 BF=330 BR=15 IKF=0.06 IKR=0.03 NK=0.73
++ VAF=50 VAR=10 ISE=3.00E-14 ISC=5.00E-13 NE=2.0 NC=1.5
++ RB=50 RE=0.25 RC=0.1 CJE=1.5p VJE=0.75 MJE=0.33
++ CJC=3p VJC=0.75 MJC=0.25 TF=0.3n TR=30n)
+* NPN Transistor BC846BS Model
+.model BC846BS NPN (
++ IS=1.00E-14 BF=400 BR=10 IKF=0.04 IKR=0.01 NK=0.7
++ VAF=100 VAR=20 ISE=2.00E-14 ISC=2.00E-13 NE=1.5 NC=2
++ RB=150 RE=0.2 RC=0.2 CJE=1.2p VJE=0.75 MJE=0.33
++ CJC=2.5p VJC=0.5 MJC=0.25 TF=0.2n TR=10n)
+* .step param RL list  6.6 4 0.01
+* vs=2,6*Corriente
+* .op
+.tran 0 0.5m 200u
+* aca tenemos que poner Rs mas chiquis porque mucho ruido justo parte problematica
+* estas no son tan problematicas pero mas chiquis mejor, del orden de decenas de ohms y que R2 no sea muy chica para que no tenga tanta potencia
+* EXPLICACION BREVE DE ESTE ARCHIVO\nEn este archivo simulamos como responde el circuito a un escalón para cuando existe limitación de corriente. \n \nLa simulación corresponde al LDO A que opera limitando corriente entre 750mA y 200mA. Su corriente nominal son creo que 10mA.\n5V si las dos resistencias de Rf son iguales\n3.3V si las dos resistencias son diferentes. El valor de la resistencia inferior esta en cerca de los 5k\n \nNosotros queremos ver que las variaciones en el escalon no hagan saltar la tension \nde salida y que efectivamente se limite corriente. Debemos poder ver una corriente \npracticamente constante, con escaloncitos de forma medio exponenciales en sus flancos de subida y de bajada.
+.param RL 2
+.backanno
+.end
