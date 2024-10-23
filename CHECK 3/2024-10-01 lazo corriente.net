@@ -1,0 +1,93 @@
+* X:\taller-circuitos-tpi\CHECK 3\2024-10-01 lazo corriente.asc
+RL V2s 0 {RL}
+VIN Vpos 0 6.35
+R1f V2s retro 1.5k
+R2f retro 0 1.5k
+Rs V2s V1s {Ri}
+R2 V1s N005 1.15K
+R3 N005 0 46k
+R4 V2s N001 1.15K
+R5 Vs N001 46k
+Rx1 ref_in Vref 5k
+Ry1 0 ref_in 536
+Ra1 retro_in retro 115k
+Rb1 0 retro_in 845k
+R6 N014 ref_out 2k
+R7 N014 retro_out 2k
+R8 N015 0 2k
+R9 Vref-c N015 2k
+R10 N002 0 1k
+R11 N002 Vs 1k
+R12 N006 Vref-c 2k
+R13 N004 N006 2k
+Q2 N011 N011 N009 0 BC558B
+Q3 N003 N011 N010 0 BC558B
+Q4 N011 retro N019 0 BC548B
+Q5 N003 Vref N019 0 BC548B
+R1 Vpos N009 {RE}
+R14 Vpos N010 {RE}
+R15 Vpos N017 1k
+Q6 N017 N017 0 0 BC548B
+Q7 N019 N017 0 0 BC548B
+M1 V1s N003 Vpos Vpos irf9540npbf
+V2 Vref 0 2.5
+Q1 N003 N012 Vpos 0 BC558B
+Q8 N012 Vopamp 0 0 BC548B
+R17 Vpos N012 100k
+L1 Vopamp N004 1Meg
+C1 Vopamp N008 1Meg
+V1 N008 0 AC 1
+C2 V2s N016 {CL}
+C3 N007 N003 47n
+R16 V2s N007 100
+C4 Vpos N003 150p
+C5 V2s retro 470p
+R18 N016 0 0.3
+C6 N012 P001 100p
+R19 P001 N003 20
+XU1 N005 N001 Vpos 0 Vs TLV247xA
+XU2 ref_in ref_out Vpos 0 ref_out TLV247xA
+XU3 retro_in retro_out Vpos 0 retro_out TLV247xA
+XU4 N014 N015 Vpos 0 Vref-c TLV247xA
+XU5 N002 N006 Vpos 0 N004 TLV247xA
+C7 N004 N006 0.01n
+C8 Vs N001 2n
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\verof\AppData\Local\LTspice\lib\cmp\standard.bjt
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\verof\AppData\Local\LTspice\lib\cmp\standard.mos
+.op
+.MODEL irf9540npbf PMOS LEVEL=1 IS=1e-32  L=100u W=100u VTO=-3.74034 LAMBDA=0.00254531 KP=6.90462 CGSO=1.15995e-05 CGDO=1e-11
+* ;param RL=500
+.param RF=1.5k
+* Punto de operación
+.param Ri=0.1
+* Realimentador De Corriente / Foldback:
+* Sensado Corriente
+* Realim para los limites del LDO_B
+* Sumador:
+* Amplificador de Error
+.lib mcp6001b.txt
+* .step param RG 1k 5k 100
+.param RE=1k
+#MODELO TRANSISTORES CASA
+.model BC558B PNP(Is=1.02f Xti=3 Eg=1.11 Vaf=52.31 Bf=306.5 Ise=10.27f Ne=1.764 Ikf=91.85m Nk=.5351 Xtb=1.5 Br=6.48 Isc=1.472f Nc=1.294 Ikr=.5584 Rc=1.086 Cjc=9.81p Mjc=.332 Vjc=.4865 Fc=.5 Cje=30p Mje=.3333 Vje=.5 Tr=10n Tf=611.6p Itf=1.373 Xtf=26.05 Vtf=10 Vceo=30 Icrating=100m mfg=Philips)
+.model BC548B NPN(Is=7.049f Xti=3 Eg=1.11 Vaf=62.79 Bf=374.6 Ise=68f Ne=1.576 Ikf=81.57m Nk=.4767 Xtb=1.5 Br=1 Isc=12.4f Nc=1.835 Ikr=3.924 Rc=.9747 Cjc=5.25p Mjc=.3147 Vjc=.5697 Fc=.5 Cje=11.5p Mje=.6715 Vje=.5 Tr=10n Tf=410.2p Itf=1.491 Xtf=40.06 Vtf=10 Vceo=30 Icrating=100m mfg=Philips)
+* vs=2,6*Corriente
+* .ac dec 10 1 100Meg\n.meas AC f1 FIND V(N004) WHEN mag(V(N004))=1 CROSS=1
+.lib sloj018.txt
+;step param Cvar list  1n 2n 5n
+;param CL 15u
+.step param  CL list 1u 2.2u 15u
+#5v
+.param RL 6.6
+.step param RL list 6.5 0.01
+;step param RL list 4 4.3
+.options gmin=1e-10
+.options abstol=1e-10
+.options reltol=0.003
+.options cshunt=1e-15
+.backanno
+.end

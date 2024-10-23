@@ -1,0 +1,7 @@
+* X:\taller-circuitos-tpi\CHECK 3\Draft2.asc
+V1 N001 0 9
+R1 N001 N002 3k24
+R2 N002 0 9k
+.op
+.backanno
+.end

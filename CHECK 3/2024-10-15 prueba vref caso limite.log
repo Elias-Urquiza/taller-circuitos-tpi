@@ -1,0 +1,69 @@
+LTspice 24.0.12 for Windows
+Circuit: * X:\taller-circuitos-tpi\CHECK 3\2024-10-15 prueba vref caso limite.asc
+Start Time: Fri Oct 18 22:13:33 2024
+Warning: Multiple definitions of model "2scr375p" Type: BJT
+Warning: Multiple definitions of model "bc857b" Type: BJT
+Warning: Multiple definitions of model "bc847c" Type: BJT
+Warning: Multiple definitions of model "bc847b" Type: BJT
+solver = Normal
+Maximum thread count: 2
+tnom = 27
+temp = 27
+method = modified trap
+Direct Newton iteration for .op point succeeded.
+Semiconductor Device Operating Points:
+                        --- Bipolar Transistors ---
+Name:       q2          q3          q1          q4          q5
+Model:    bc558b      bc558b      bc558b      bc548b      bc548b
+Ib:      -3.06e-06   -2.85e-06    8.44e-17    3.10e-06    3.10e-06
+Ic:      -9.09e-04   -8.83e-04    0.00e+00    9.15e-04    8.83e-04
+Vbe:     -7.12e-01   -7.10e-01   -6.38e-07    6.61e-01    6.61e-01
+Vbc:      0.00e+00    2.26e+00    8.11e-05   -3.05e+00   -7.82e-01
+Vce:     -7.12e-01   -2.98e+00   -8.17e-05    3.71e+00    1.44e+00
+BetaDC:   2.97e+02    3.10e+02    0.00e+00    2.95e+02    2.85e+02
+Gm:       3.47e-02    3.38e-02    1.24e-16    3.50e-02    3.38e-02
+Rpi:      8.53e+03    9.16e+03    8.16e+11    9.15e+03    9.15e+03
+Rx:       0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Ro:       5.76e+04    6.18e+04    2.54e+13    7.20e+04    7.20e+04
+Cbe:      8.23e-11    8.17e-11    3.00e-11    5.29e-11    5.24e-11
+Cbc:      9.82e-12    5.52e-12    9.81e-12    2.93e-12    4.00e-12
+Cjs:      0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+BetaAC:   2.97e+02    3.10e+02    1.02e-04    3.20e+02    3.09e+02
+Cbx:      0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Ft:       6.00e+07    6.17e+07    4.90e-03    9.98e+07    9.53e+07
+
+Name:       q6          q7          q8
+Model:    bc548b      bc548b      bc548b
+Ib:       6.01e-06    6.01e-06   -6.37e-12
+Ic:       1.77e-03    1.80e-03    6.38e-12
+Vbe:      6.79e-01    6.79e-01    0.00e+00
+Vbc:      0.00e+00   -1.16e+00   -6.35e+00
+Vce:      6.79e-01    1.84e+00    6.35e+00
+BetaDC:   2.95e+02    3.00e+02   -1.00e+00
+Gm:       6.71e-02    6.83e-02    3.00e-13
+Rpi:      4.64e+03    4.64e+03    3.75e+11
+Rx:       0.00e+00    0.00e+00    0.00e+00
+Ro:       3.55e+04    3.55e+04    8.91e+15
+Cbe:      6.70e-11    6.75e-11    1.15e-11
+Cbc:      5.26e-12    3.70e-12    2.39e-12
+Cjs:      0.00e+00    0.00e+00    0.00e+00
+BetaAC:   3.11e+02    3.17e+02    1.12e-01
+Cbx:      0.00e+00    0.00e+00    0.00e+00
+Ft:       1.48e+08    1.53e+08    3.04e-02
+
+                        --- VDMOSFET Transistors ---
+Name:          m1
+Model:       irf9640
+Id:          1.13e-10
+Vgs:        -8.17e-05
+Vds:        -6.35e+00
+Vth:        -3.50e+00
+Gm:          3.58e-31
+Gds:         1.77e-34
+Cgs:         1.00e-09
+Cgd:         1.57e-10
+Cbody:       3.69e-10
+
+
+Total elapsed time: 0.546 seconds.
+

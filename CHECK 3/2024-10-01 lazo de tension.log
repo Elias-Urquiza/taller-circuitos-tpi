@@ -1,0 +1,68 @@
+LTspice 24.0.12 for Windows
+Circuit: * X:\taller-circuitos-tpi\CHECK 3\2024-10-01 lazo de tension.asc
+Start Time: Tue Oct 15 13:41:23 2024
+Warning: Multiple definitions of model "2scr375p" Type: BJT
+Warning: Multiple definitions of model "bc857b" Type: BJT
+Warning: Multiple definitions of model "bc847c" Type: BJT
+Warning: Multiple definitions of model "bc847b" Type: BJT
+solver = Normal
+Maximum thread count: 2
+
+
+
+WARNING: Node N002 is floating.
+
+WARNING: Less than two connections to node n002.  This node is used by r19.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-05
+vernier = 0.5
+Gmin = 2.5711e-06
+vernier = 0.25
+vernier = 0.125
+Gmin = 2.07477e-06
+vernier = 0.166667
+vernier = 0.222222
+Gmin = 1.3082e-06
+vernier = 0.296296
+vernier = 0.395061
+Gmin = 6.33426e-07
+vernier = 0.526748
+Gmin = 2.0688e-07
+vernier = 0.702331
+vernier = 0.936441
+Gmin = 3.37896e-08
+vernier = 1
+Gmin = 3.72216e-09
+Gmin = 3.99664e-10
+Gmin = 4.29136e-11
+Gmin = 4.60781e-12
+Gmin = 4.9476e-13
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+.step cl=1e-06
+
+
+
+.step cl=2.2e-06
+tnom = 27
+temp = 27
+method = modified trap
+.step cl=1.5e-05
+
+
+Measurement: f1
+  step	v(vreal)	at
+     1	(-0.002936dB,64.7095°)	682917
+     2	(-0.00158611dB,81.5725°)	558777
+     3	(-7.75877e-05dB,102.402°)	492724
+
+Total elapsed time: 0.689 seconds.
+

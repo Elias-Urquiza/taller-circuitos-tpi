@@ -1,0 +1,330 @@
+LTspice 24.0.12 for Windows
+Circuit: * X:\taller-circuitos-tpi\CHECK 3\2024-10-145 LDO con opamps TLV.asc
+Start Time: Mon Oct 14 19:39:17 2024
+Warning: Multiple definitions of model "bc548b" Type: BJT
+Warning: Multiple definitions of model "2scr375p" Type: BJT
+Warning: Multiple definitions of model "bc857b" Type: BJT
+Warning: Multiple definitions of model "bc847c" Type: BJT
+Warning: Multiple definitions of model "bc847b" Type: BJT
+solver = Normal
+Maximum thread count: 2
+
+
+
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Increasing initial diagonal Gmin to 100
+Gmin = 100
+vernier = 0.5
+Gmin = 16.7772
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+Gmin = 14.0358
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.00390625
+vernier = 0.00195312
+Gmin = 13.9134
+vernier = 0.000976562
+vernier = 0.000488281
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 15.9091%
+Source Step = 17.803%
+Source Step = 19.697%
+Source Step = 21.5909%
+Source Step = 23.4848%
+vernier = 0.09375
+Source Step = 25.6629%
+Source Step = 28.5038%
+Source Step = 31.3447%
+Source Step = 34.1856%
+Source Step = 37.0265%
+vernier = 0.140625
+Source Step = 40.1515%
+Source Step = 44.4129%
+Source Step = 44.4595%
+Source Step = 44.5261%
+Source Step = 44.5927%
+Source Step = 44.6592%
+Source Step = 44.7258%
+vernier = 0.0032959
+Source Step = 44.8057%
+Source Step = 44.9056%
+Source Step = 45.0055%
+Source Step = 45.1054%
+Source Step = 45.2052%
+vernier = 0.00494385
+Source Step = 45.3201%
+Source Step = 45.4699%
+Source Step = 45.6197%
+Source Step = 45.7695%
+Source Step = 45.9193%
+vernier = 0.00741577
+Source Step = 46.0841%
+Source Step = 46.3089%
+Source Step = 46.5336%
+Source Step = 46.7583%
+Source Step = 46.983%
+vernier = 0.0111237
+Source Step = 47.219%
+Source Step = 47.5561%
+Source Step = 47.8931%
+Source Step = 48.2302%
+Source Step = 48.5673%
+Source Step = 48.9044%
+vernier = 0.0166855
+Source Step = 49.41%
+Source Step = 49.9156%
+Source Step = 50.4212%
+Source Step = 50.9269%
+Source Step = 51.4325%
+vernier = 0.0250282
+Source Step = 52.1656%
+Source Step = 52.9241%
+Source Step = 53.6825%
+Source Step = 54.4409%
+Source Step = 55.1994%
+vernier = 0.0375423
+Source Step = 56.2612%
+Source Step = 57.3988%
+Source Step = 58.5364%
+Source Step = 59.6741%
+Source Step = 60.8117%
+vernier = 0.0563135
+Source Step = 62.3476%
+Source Step = 64.054%
+Source Step = 65.0779%
+vernier = 0.00351959
+Source Step = 65.0673%
+Source Step = 65.0939%
+Source Step = 65.1206%
+Source Step = 65.1472%
+Source Step = 65.1739%
+vernier = 0.00131985
+Source Step = 65.2059%
+Source Step = 65.2459%
+Source Step = 65.2859%
+Source Step = 65.3259%
+Source Step = 65.3659%
+vernier = 0.00197977
+Source Step = 65.4119%
+Source Step = 65.4719%
+Source Step = 65.5319%
+Source Step = 65.5919%
+Source Step = 65.6519%
+vernier = 0.00296966
+Source Step = 65.7178%
+Source Step = 65.8078%
+Source Step = 65.8978%
+Source Step = 65.9878%
+Source Step = 66.0778%
+vernier = 0.00445449
+Source Step = 66.1723%
+Source Step = 66.3073%
+Source Step = 66.4423%
+Source Step = 66.5772%
+Source Step = 66.7122%
+Source Step = 66.8472%
+vernier = 0.00668173
+Source Step = 67.0497%
+Source Step = 67.2522%
+Source Step = 67.4546%
+Source Step = 67.6571%
+Source Step = 67.8596%
+vernier = 0.0100226
+Source Step = 68.1532%
+Source Step = 68.4569%
+Source Step = 68.7606%
+Source Step = 69.0643%
+Source Step = 69.368%
+vernier = 0.0150339
+Source Step = 69.7932%
+Source Step = 70.2488%
+Source Step = 70.7044%
+Source Step = 71.16%
+Source Step = 71.6155%
+vernier = 0.0225508
+Source Step = 72.2306%
+Source Step = 72.9139%
+Source Step = 73.5973%
+Source Step = 74.2806%
+Source Step = 74.964%
+vernier = 0.0338263
+Source Step = 75.8524%
+Source Step = 76.8774%
+Source Step = 77.9024%
+Source Step = 78.9275%
+Source Step = 79.9525%
+vernier = 0.0507394
+Source Step = 81.2338%
+Source Step = 82.7714%
+Source Step = 84.3089%
+Source Step = 85.8465%
+Source Step = 87.384%
+vernier = 0.0761091
+Source Step = 89.2291%
+Source Step = 90.6417%
+Source Step = 90.7859%
+Source Step = 90.93%
+Source Step = 91.0742%
+Source Step = 91.2183%
+vernier = 0.00713523
+Source Step = 91.3697%
+Source Step = 91.5859%
+Source Step = 91.8021%
+Source Step = 92.0183%
+Source Step = 92.2346%
+Source Step = 92.4508%
+vernier = 0.0107028
+Source Step = 92.7751%
+Source Step = 93.0994%
+Source Step = 93.4238%
+Source Step = 93.7481%
+Source Step = 94.0724%
+vernier = 0.0160543
+Source Step = 94.5427%
+Source Step = 95.0292%
+Source Step = 95.5157%
+Source Step = 96.0022%
+Source Step = 96.4887%
+vernier = 0.0240814
+Source Step = 97.1698%
+Source Step = 97.8995%
+Source Step = 98.6292%
+Source Step = 99.359%
+Source stepping succeeded in finding the operating point.
+
+Semiconductor Device Operating Points:
+                        --- Diodes ---
+Name:    d:u3:c      d:u3:e      d:u3:lp     d:u3:ln     d:u3:p
+Model:    u3:dy       u3:dy       u3:dx       u3:dx       u3:dx
+Id:     -4.55e-12    4.44e-13   -1.10e-10   -1.10e-10   -6.17e-12
+Vd:     -4.63e+00    1.39e-01   -1.10e+02   -1.10e+02   -6.17e+00
+Req:     1.00e+12    1.28e+11    1.00e+12    1.00e+12    1.00e+12
+CAP:     4.21e-12    1.08e-11    0.00e+00    0.00e+00    0.00e+00
+
+Name:    d:u2:c      d:u2:e      d:u2:lp     d:u2:ln     d:u2:p
+Model:    u2:dy       u2:dy       u2:dx       u2:dx       u2:dx
+Id:     -4.88e-12    2.18e-09   -1.10e-10   -1.10e-10   -6.17e-12
+Vd:     -4.87e+00    3.83e-01   -1.10e+02   -1.10e+02   -6.17e+00
+Req:     1.00e+12    1.19e+07    1.00e+12    1.00e+12    1.00e+12
+CAP:     4.13e-12    1.27e-11    0.00e+00    0.00e+00    0.00e+00
+
+Name:    d:u4:c      d:u4:e      d:u4:lp     d:u4:ln     d:u4:p
+Model:    u4:dy       u4:dy       u4:dx       u4:dx       u4:dx
+Id:     -5.22e-12    8.17e-03   -1.18e-10   -1.02e-10   -6.17e-12
+Vd:     -5.26e+00    7.75e-01   -1.18e+02   -1.02e+02   -6.17e+00
+Req:     1.00e+12    3.17e+00    1.00e+12    1.00e+12    1.00e+12
+CAP:     4.00e-12    1.80e-11    0.00e+00    0.00e+00    0.00e+00
+
+Name:    d:u5:c      d:u5:e      d:u5:lp     d:u5:ln     d:u5:p
+Model:    u5:dy       u5:dy       u5:dx       u5:dx       u5:dx
+Id:     -4.00e-12   -2.22e-13   -1.09e-10   -1.11e-10   -6.17e-12
+Vd:     -4.16e+00   -3.30e-01   -1.09e+02   -1.11e+02   -6.17e+00
+Req:     1.00e+12    1.00e+12    1.00e+12    1.00e+12    1.00e+12
+CAP:     4.40e-12    8.67e-12    0.00e+00    0.00e+00    0.00e+00
+
+Name:    d:u1:c      d:u1:e      d:u1:lp     d:u1:ln     d:u1:p
+Model:    u1:dy       u1:dy       u1:dx       u1:dx       u1:dx
+Id:     -5.00e-12    1.35e-06   -1.10e-10   -1.10e-10   -6.17e-12
+Vd:     -5.04e+00    5.50e-01   -1.10e+02   -1.10e+02   -6.17e+00
+Req:     1.00e+12    1.92e+04    1.00e+12    1.00e+12    1.00e+12
+CAP:     4.07e-12    1.48e-11    0.00e+00    0.00e+00    0.00e+00
+
+                        --- Bipolar Transistors ---
+Name:       q2          q3          q1          q4          q5
+Model:    bc558b      bc558b      bc558b      bc548b      bc548b
+Ib:      -1.69e-12    2.64e-12    4.42e-12   -6.54e-12    5.70e-03
+Ic:      -6.37e-12   -1.12e-11   -4.51e-12    5.42e-12    1.57e-11
+Vbe:     -2.26e-01   -2.26e-01   -5.81e-02   -1.05e+00    7.29e-01
+Vbc:      0.00e+00    4.33e+00    4.50e+00   -5.40e+00    7.09e-01
+Vce:     -2.26e-01   -4.56e+00   -4.56e+00    4.35e+00    1.97e-02
+BetaDC:   3.76e+00   -4.25e+00   -1.02e+00   -8.29e-01    2.76e-09
+Gm:       2.46e-10    2.67e-10    4.05e-13    7.11e-31    1.97e-01
+Rpi:      2.97e+10    2.97e+10    5.54e+11    1.00e+12    7.43e+02
+Rx:       0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Ro:       6.20e+12    8.21e+12    5.42e+15    0.00e+00    5.19e+00
+Cbe:      3.67e-11    3.67e-11    3.13e-11    5.38e-12    1.95e-10
+Cbc:      9.81e-12    4.58e-12    4.53e-12    2.51e-12    2.20e-09
+Cjs:      0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+BetaAC:   7.30e+00    7.91e+00    2.24e-01    7.11e-19    1.46e+02
+Cbx:      0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Ft:       8.35e-01    1.02e+00    7.82e-03    2.02e-02    1.31e+07
+
+Name:       q6          q7          q8
+Model:    bc548b      bc548b      bc548b
+Ib:       1.84e-05    1.84e-05    8.19e-09
+Ic:       5.60e-03    5.70e-03    5.81e-07
+Vbe:      7.10e-01    7.10e-01    4.69e-01
+Vbc:      0.00e+00   -1.06e+00   -5.82e+00
+Vce:      7.10e-01    1.77e+00    6.29e+00
+BetaDC:   3.04e+02    3.09e+02    7.09e+01
+Gm:       2.04e-01    2.08e-01    2.25e-05
+Rpi:      1.48e+03    1.48e+03    4.52e+06
+Rx:       0.00e+00    0.00e+00    0.00e+00
+Ro:       1.12e+04    1.12e+04    1.18e+08
+Cbe:      1.25e-10    1.26e-10    2.91e-11
+Cbc:      5.27e-12    3.77e-12    2.45e-12
+Cjs:      0.00e+00    0.00e+00    0.00e+00
+BetaAC:   3.01e+02    3.06e+02    1.02e+02
+Cbx:      0.00e+00    0.00e+00    0.00e+00
+Ft:       2.50e+08    2.54e+08    1.13e+05
+
+                        --- JFET Transistors ---
+Name:    j:u3:1      j:u3:2      j:u2:1      j:u2:2      j:u4:1
+Model:   u3:jx1      u3:jx2      u2:jx1      u2:jx2      u4:jx1
+Id:      5.30e-06    5.31e-06    5.30e-06    5.32e-06    5.40e-06
+Vgs:    -9.06e-01   -9.06e-01   -9.06e-01   -9.05e-01   -9.05e-01
+Vds:     4.94e+00    4.94e+00    4.74e+00    4.74e+00    5.13e+00
+Gm:      1.12e-04    1.12e-04    1.12e-04    1.12e-04    1.13e-04
+Gds:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cgs:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cgd:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+Name:    j:u4:2      j:u5:1      j:u5:2      j:u1:1      j:u1:2
+Model:   u4:jx2      u5:jx1      u5:jx2      u1:jx1      u1:jx2
+Id:      5.20e-06    5.31e-06    5.33e-06    5.31e-06    5.32e-06
+Vgs:    -9.07e-01   -9.06e-01   -9.05e-01   -9.06e-01   -9.05e-01
+Vds:     5.14e+00    4.35e+00    4.35e+00    4.70e+00    4.70e+00
+Gm:      1.11e-04    1.12e-04    1.13e-04    1.12e-04    1.12e-04
+Gds:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cgs:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Cgd:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+                        --- MOSFET Transistors ---
+Name:          m1
+Model:     irf9540npbf
+Id:         -3.40e-01
+Vgs:        -4.56e+00
+Vds:        -5.30e+00
+Vbs:         0.00e+00
+Vth:        -3.74e+00
+Vdsat:      -8.19e-01
+Gm:          8.30e-01
+Gds:         8.53e-04
+Gmb:         0.00e+00
+Cbd:         0.00e+00
+Cbs:         0.00e+00
+Cgsov:       1.16e-09
+Cgdov:       1.00e-15
+Cgbov:       0.00e+00
+Cgs:         0.00e+00
+Cgd:         0.00e+00
+Cgb:         0.00e+00
+
+
+
+
+
+tnom = 27
+temp = 27
+method = modified trap
+Total elapsed time: 312.587 seconds.
+

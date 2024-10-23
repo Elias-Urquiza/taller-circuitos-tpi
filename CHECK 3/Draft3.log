@@ -1,0 +1,81 @@
+LTspice 24.0.12 for Windows
+Circuit: * X:\taller-circuitos-tpi\CHECK 3\Draft3.asc
+Start Time: Sat Oct 19 21:02:47 2024
+solver = Normal
+Maximum thread count: 2
+
+
+
+Direct Newton iteration for .op point succeeded.
+Semiconductor Device Operating Points:
+                        --- Diodes ---
+Name:      d2
+Model:  rsa6_1u5
+Id:     -1.45e-07
+Vd:     -6.00e+00
+Req:     2.32e+06
+CAP:     4.56e-11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+tnom = 27
+temp = 27
+method = modified trap
+Total elapsed time: 1.380 seconds.
+
