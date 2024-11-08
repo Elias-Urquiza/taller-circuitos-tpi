@@ -1,0 +1,11 @@
+LTspice 24.0.12 for Windows
+Circuit: * X:\taller-circuitos-tpi\CHECK 4\Simus\pwm\PWM.asc
+Start Time: Thu Nov  7 22:53:54 2024
+solver = Normal
+Maximum thread count: 2
+tnom = 27
+temp = 27
+method = modified trap
+Direct Newton iteration for .op point succeeded.
+Total elapsed time: 1.498 seconds.
+
